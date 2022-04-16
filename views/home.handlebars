@@ -1,0 +1,13 @@
+{{#if message}} 
+
+    {{message}}   
+    {{> news}}
+    {{> links data=links}} 
+    {{> legal}}
+
+{{else}}
+    Welcome ! This is the first time you visite us.  
+    {{> news}}
+    {{> links data=links}} 
+    {{> legal}}
+{{/if}}

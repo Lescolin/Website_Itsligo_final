@@ -1,0 +1,10 @@
+<ul style="">
+  {{#if newName}}
+  <h2>A person has been added to the database recently. His name is : {{newName}}</h2>
+  {{/if}}
+  {{#each listing}}
+    <li><a href="/staff/{{this.name}}">{{this.name}}</li>
+    <img src={{this.imageurl}} alt="photo of the person" height="200"></a>
+    <br>Click on {{this.name}} to get his profil !
+  {{/each}}
+</ul>

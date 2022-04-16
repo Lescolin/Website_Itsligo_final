@@ -1,0 +1,24 @@
+<h2> All about {{person.name}}</h2>
+
+<h3>Name : {{person.name}}</h3>
+
+{{#if person.dob}}
+
+<h3>Date of Birth : {{person.dob}}</h3>
+
+{{/if}}
+
+<img src={{person.imageurl}} alt="photo of the person">
+
+<a href='{{person.name}}/edit'>
+<button type="button" class="btn btn-primary">Edit</button></a>
+
+<a href='/staff/{{person.name}}/delete'
+ onclick="return confirm('are you sure you want to delete this person?');">
+<button type="button" class="btn btn-danger">Delete</button> </a>
+
+<ul>
+  {{#each person.hobbies}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
